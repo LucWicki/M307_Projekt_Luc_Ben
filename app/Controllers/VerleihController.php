@@ -28,7 +28,7 @@
                 $result = $statement->fetchAll();
     
     
-                require 'app/Views/uebersicht.php';
+                require 'app/Views/uebersicht.view.php';
     
     
             }
