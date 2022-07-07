@@ -14,16 +14,16 @@
         public int $risikostufe;
         public string $hypopaket;
 
-        public function __construct(string $email, string $name, int $telefon, int $risikostufe, string $hypopaket){
+        public function __construct(string $email, string $name, int $telefon, int $risikostufe, ){
             $this->name = $name;
             $this->email = $email;
             $this->telefon = $telefon;
             $this->risikostufe = $risikostufe;
-            $this->hypopaket = $hypopaket;
+           // $this->hypopaket = $hypopaket;
             $this->db = db();
 
         }
-
+        //string $hypopaket
         public function erfassen(){
 
             
@@ -32,7 +32,7 @@
             $statement->bindParam(':name', $this->name, PDO::PARAM_STR);
             $statement->bindParam(':telefon', $this->telefon, PDO::PARAM_INT);
             $statement->bindParam(':risikostufe', $this->risikostufe, PDO::PARAM_INT);
-            $statement->bindParam(':hypopaket', $this->hypopaket, PDO::PARAM_STR);
+            //$statement->bindParam(':hypopaket', $this->hypopaket, PDO::PARAM_STR);
 
             return $statement->execute();
 
