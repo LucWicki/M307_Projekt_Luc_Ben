@@ -7,7 +7,7 @@
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 $erfassen = new hypo($_POST['email'], $_POST['name'], $_POST['telefon'], $_POST['risikostufe']);
-                $alle = erfassen();
+                $erfassen->erfassen();
 
            /*  header('Location: uebersicht'); */
 
