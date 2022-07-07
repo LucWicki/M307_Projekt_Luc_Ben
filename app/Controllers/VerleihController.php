@@ -3,6 +3,7 @@
     class VerleihController{
 
         public function erfassen(){
+            
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $pdo = db();
 
@@ -18,7 +19,6 @@
         public function uebersicht(){
 
             
-
                 $pdo = db();
     
                /*  $statement = $pdo->prepare("INSERT INTO `verleiheanmeldung` (Name) VALUES (:Name)");
@@ -37,7 +37,7 @@
 
             require 'app/Views/uebersicht.view.php';
             */
-        }
+        
 
 
 
