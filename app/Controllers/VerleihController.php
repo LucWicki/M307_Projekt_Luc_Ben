@@ -5,6 +5,7 @@
         public function erfassen(){
             
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
             $pdo = db();
 
             $statement = $pdo->prepare("INSERT INTO `verleiheanmeldung` (Email) VALUES (:Email)");
@@ -12,13 +13,12 @@
 
             $statement->execute();
 
-            require 'app/Views/Verleih.view.php';
             }
+            require 'app/Views/Verleih.view.php';
         }
 
         public function uebersicht(){
 
-            
                 $pdo = db();
     
                /*  $statement = $pdo->prepare("INSERT INTO `verleiheanmeldung` (Name) VALUES (:Name)");
@@ -33,19 +33,6 @@
             }
         }
 
-        public function uebersicht(){
-
-          
-            /*
-            $pdo = db();
-
-            $statement = $pdo->prepare('SELECT * FROM verleiheanmeldung');
-            $statement->execute();
-
-            $result = $statement->fetchAll();
-
-            require 'app/Views/uebersicht.view.php';
-            */
         
 
 
@@ -55,7 +42,6 @@
 
 
 
-    }
 
 
 
