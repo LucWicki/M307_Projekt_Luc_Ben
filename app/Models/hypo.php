@@ -8,7 +8,7 @@
          */
         public $db;
         
-        //public int $selectbefehl = 'SELECT mortgages.id FROM mortgages INNER JOIN erfassen ON erfassen.fk_mortgages = mortgages.id';
+        public $selectbefehl = 'SELECT mortgages.id, mortgages.package  FROM mortgages INNER JOIN erfassen ON erfassen.fk_mortgages = mortgages.id';
         public string $name;
         public string $email;
         public int $telefon;

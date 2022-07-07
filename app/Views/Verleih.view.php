@@ -27,13 +27,23 @@
         <input type="telfon" name="telefon"> <br>
 
         <label for="risikostufe">Risikostufe:</label>
-       <select name="risikostufe">
-            <option value="sehr tief">sehr tief</option>
+       <select name="risikostufe" id="risikostufe">
+            <option value="sehr tief">sehr tief</option> <!-- -> value soll id sein, Wert soll package -->
             <option value="tief">tief</option>
             <option value="normal">normal</option>
             <option value="hoch">hoch</option>
             <option value="sehr hoch">sehr hoch</option>
        </select>
+
+    <select name="xx">
+
+    <?php
+        foreach(){
+            echo "option ... id ... value"
+        }
+    ?>
+
+    </select>
 
         </fieldset>
 
