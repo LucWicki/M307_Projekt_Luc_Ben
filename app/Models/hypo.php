@@ -47,26 +47,7 @@
         return $statement->fetchAll();
     }
 
-
-        
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>
