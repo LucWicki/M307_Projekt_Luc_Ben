@@ -1,6 +1,4 @@
 
-
-
 function risikoberechnung(){
     var frist = 480;
     var select = document.getElementById('risiko');
