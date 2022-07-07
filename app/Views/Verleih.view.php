@@ -17,11 +17,11 @@
 
        <!--  <label for="name">Name:</label> 
         <input type="text" name="Name"> <br> -->
-        <label for="email">Email:</label>
-        <input type="email" name="email"> <br> 
-
         <label for="name">Name:</label>
         <input type="name" name="name"> <br>
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email"> <br> 
 
         <label for="telefon">Telefon:</label>
         <input type="telfon" name="telefon"> <br>
