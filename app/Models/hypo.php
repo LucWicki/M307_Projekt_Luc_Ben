@@ -15,12 +15,12 @@
         public int $risikostufe;
         public string $hypopaket;
 
-        public function __construct(string $email, string $name, int $telefon, int $risikostufe, int $selectbefehl ){
+        public function __construct(string $email, string $name, int $telefon, int $risikostufe ){ //, int $selectbefehl
             $this->name = $name;
             $this->email = $email;
             $this->telefon = $telefon;
             $this->risikostufe = $risikostufe;
-            $this->hypopaket = $selectbefehl;
+            //$this->hypopaket = $selectbefehl;
             $this->db = db();
 
         }
@@ -28,7 +28,7 @@
         public function erfassen(){
 
             
-            $statement = $this->db->prepare('INSERT INTO `erfassen` (name, email,  telefon, risikostufe, fk_mortgages) VALUES (:name, :email,  :telefon, :risikostufe, :fk_mortgages)');
+            $statement = $this->db->prepare('INSERT INTO `erfassen` (name, email,  telefon, risikostufe) VALUES (:name, :email,  :telefon, :risikostufe)'); //, fk_mortgages, :fk_mortgages
             $statement->bindParam(':email', $this->email, PDO::PARAM_STR);
             $statement->bindParam(':name', $this->name, PDO::PARAM_STR);
             $statement->bindParam(':telefon', $this->telefon, PDO::PARAM_INT);
@@ -38,6 +38,14 @@
             return $statement->execute();
 
         }
+
+        public function getAll() : array
+    {
+        $statement = $this->db->prepare('SELECT * FROM mortgages');
+        $statement->execute();
+
+        return $statement->fetchAll();
+    }
 
 
         
