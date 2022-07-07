@@ -4,7 +4,7 @@ require 'core/bootstrap.php';
 $routes = [
 	'/hallo/welt' => 'WelcomeController@index',
 	'/verleihe/erfassen' => 'VerleihController@erfassen',
-	'verleihe/uebersicht' => 'VerleihController@uebersicht',
+	'/verleihe/uebersicht' => 'VerleihController@uebersicht',
 ];
 
 $db = [

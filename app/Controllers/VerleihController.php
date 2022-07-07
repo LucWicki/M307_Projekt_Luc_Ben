@@ -3,7 +3,6 @@
     class VerleihController{
 
         public function erfassen(){
-            
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $pdo = db();
@@ -12,9 +11,14 @@
             $statement->bindParam(':Email', $_POST['Email'], PDO::PARAM_STR);
 
             $statement->execute();
+            
+            echo 'halo';
 
-            }
-            require 'app/Views/Verleih.view.php';
+
+            header('Location: uebersicht');
+
+            } 
+            require 'app/Views/verleih.view.php';
         }
 
         public function uebersicht(){
