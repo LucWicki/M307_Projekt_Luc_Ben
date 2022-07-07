@@ -28,7 +28,18 @@
 
         <label for="risikostufe">Risikostufe:</label>
         <input type="risikostufe" name="risikostufe"> <br>
+
+
+        <label for="hypopaket">Hpopaket:</label> <br>
+
+        <?php foreach($hypopaket in $hp_entry) 
+             echo $hp_entry;
+        ?>
         
+      <!--  /* <select name="hypopaket"><option value="$hp_entry">$hp_entry</option></select> */ -->
+
+
+
       <!--   <label for="name">Email:</label>
         <input type="email" name="Email"> <br>
         <label for="name">Email:</label>
