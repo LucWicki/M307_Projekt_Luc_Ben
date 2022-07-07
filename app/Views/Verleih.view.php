@@ -28,11 +28,11 @@
 
         <label for="risikostufe">Risikostufe:</label>
         <input type="risikostufe" name="risikostufe"> <br>
+        </fieldset>
 
+        <label for="hypopaket">Hypopaket:</label> <br>
 
-        <label for="hypopaket">Hpopaket:</label> <br>
-
-        <?php foreach($hypopaket in $hp_entry) 
+        <?php foreach($hypopaket as $hp_entry) 
              echo $hp_entry;
         ?>
         
@@ -47,7 +47,7 @@
  -->
         <input type="submit">
 
-        </fieldset>
+        
         
     </form>
 
