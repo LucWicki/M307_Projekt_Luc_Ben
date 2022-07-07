@@ -12,9 +12,6 @@
 
             $statement->execute();
             
-            echo 'halo';
-
-
             header('Location: uebersicht');
 
             } 
@@ -25,13 +22,13 @@
 
                 $pdo = db();
     
-               /*  $statement = $pdo->prepare("INSERT INTO `verleiheanmeldung` (Name) VALUES (:Name)");
-                $statement->bindParam(':Name', $_POST['Name'], PDO::PARAM_STR); */
-
-                $statement = $pdo->prepare("INSERT INTO `verleiheanmeldung` (Email) VALUES (:Email)");
-                $statement->bindParam(':Email', $_POST['Email'], PDO::PARAM_STR);
-
+                $statement = $pdo->prepare('SELECT * FROM erfassen');
                 $statement->execute();
+    
+                $result = $statement->fetchAll();
+    
+    
+                require 'app/Views/uebersicht.php';
     
     
             }
