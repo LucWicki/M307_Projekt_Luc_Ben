@@ -26,6 +26,7 @@
         <label for="telefon">Telefon:</label>
         <input type="telfon" name="telefon"> <br>
 
+        <label for="risikostufe">Risikostufe:</label>
        <select name="risikostufe">
             <option value="sehr tief">sehr tief</option>
             <option value="tief">tief</option>
