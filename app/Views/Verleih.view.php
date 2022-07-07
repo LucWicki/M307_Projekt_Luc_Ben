@@ -26,15 +26,17 @@
         <label for="telefon">Telefon:</label>
         <input type="telfon" name="telefon"> <br>
 
-        <label for="risikostufe">Risikostufe:</label>
-        <input type="risikostufe" name="risikostufe"> <br>
+       <select name="risikostufe">
+            <option value="sehr tief">sehr tief</option>
+            <option value="tief">tief</option>
+            <option value="normal">normal</option>
+            <option value="hoch">hoch</option>
+            <option value="sehr hoch">sehr hoch</option>
+       </select>
+
         </fieldset>
 
-        <label for="hypopaket">Hypopaket:</label> <br>
 
-        <?php foreach($hypopaket as $hp_entry) 
-             echo $hp_entry;
-        ?>
         
       <!--  /* <select name="hypopaket"><option value="$hp_entry">$hp_entry</option></select> */ -->
 
