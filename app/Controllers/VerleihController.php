@@ -2,17 +2,14 @@
 
     class VerleihController{
 
+
         public function erfassen(){
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-            $pdo = db();
+                $erfassen = new hypo();
+                $alle = $erfassen->erfassen();
 
-            $statement = $pdo->prepare("INSERT INTO `erfassen` (email) VALUES (:email)");
-            $statement->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
-
-            $statement->execute();
-            
-            header('Location: uebersicht');
+           /*  header('Location: uebersicht'); */
 
             } 
             require 'app/Views/verleih.view.php';
