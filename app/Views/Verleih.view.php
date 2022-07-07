@@ -17,9 +17,23 @@
 
        <!--  <label for="name">Name:</label> 
         <input type="text" name="Name"> <br> -->
-        <label for="name">Email:</label>
-        <input type="email" name="Email"> <br> <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email"> <br> 
 
+        <label for="name">Name:</label>
+        <input type="name" name="name"> <br>
+
+        <label for="telefon">Telefon:</label>
+        <input type="telfon" name="telefon"> <br>
+
+        <label for="risikostufe">Risikostufe:</label>
+        <input type="risikostufe" name="risikostufe"> <br>
+        
+      <!--   <label for="name">Email:</label>
+        <input type="email" name="Email"> <br>
+        <label for="name">Email:</label>
+        <input type="email" name="Email"> <br>
+ -->
         <input type="submit">
 
         </fieldset>
