@@ -19,7 +19,7 @@ class Example
 
         return $this;
     }
-
+ 
     /**
      * Datensatz mit gegebener ID von der Datenbank ins Objekt laden
      */
