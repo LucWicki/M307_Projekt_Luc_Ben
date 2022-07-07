@@ -7,7 +7,7 @@
 
             $pdo = db();
 
-            $statement = $pdo->prepare("INSERT INTO `verleiheanmeldung` (email) VALUES (:email)");
+            $statement = $pdo->prepare("INSERT INTO `erfassen` (email) VALUES (:email)");
             $statement->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
 
             $statement->execute();
