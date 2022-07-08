@@ -44,7 +44,7 @@
             $completed = $_POST['rückzahlungsstatus'] ?? false;
 
             $update = new hypo($_POST['name'], $_POST['email'], $_POST['telefon'], $_POST['risikostufe'], (int)$completed);
-            $update->update($_POST['id']);
+            $update->update($_GET['id']);
 
             header('Location: uebersicht');
         }

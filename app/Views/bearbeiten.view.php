@@ -12,7 +12,7 @@
 
     <ul>
 
-        <form action="update" method="post">
+        <form action="update?id=<?= $edit['id'] ?>" method="post">
 
        <fieldset>
         <legend>Bearbeiten</legend>
@@ -36,6 +36,8 @@
             <option value="sehr hoch">sehr hoch</option>
        </select> <br> 
 
+       <label for="rückzahlungsstatus">Rückzahlungsstatus</label>
+       <input type="text" name="rückzahlungsstatus" value="<?= $edit["rückzahlungsstatus"] ?>"> <br>
        <label id="frist">Zurückzahlungsdatum: </label> <br>
 
        <label for="hypopaket">Hypopaket:</label>
