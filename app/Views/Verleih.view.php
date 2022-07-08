@@ -29,6 +29,7 @@
 
         <label for="risikostufe">Risikostufe:</label>
        <select name="risikostufe" id="risikostufe" onchange="Zusatztage()">
+            <option value="wählen">Wählen</option>
             <option value="sehr tief">sehr tief</option> <!-- -> value soll id sein, Wert soll package -->
             <option value="tief">tief</option>
             <option value="normal">normal</option>
