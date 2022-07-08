@@ -17,7 +17,7 @@
 
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-                $erfassen = new hypo($_POST['name'], $_POST['email'],  $_POST['telefon'], $_POST['risikostufe'], $_POST['hypopaket']); //, $_POST['fk_mortgages']
+                $erfassen = new hypo($_POST['name'], $_POST['email'], $_POST['telefon'], $_POST['risikostufe'], $_POST['hypopaket']); //, $_POST['fk_mortgages']
                 $erfassen->erfassen();
                 echo 'halo';
                 /* header('Location: uebersicht');  */
