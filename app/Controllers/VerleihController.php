@@ -29,7 +29,7 @@
 
                 $pdo = db();
     
-                $statement = $pdo->prepare('SELECT erfassen.name, erfassen.email, erfassen.telefon, erfassen.risikostufe, mortgages.package FROM erfassen INNER JOIN mortgages ON erfassen.fk_mortgages = mortgages.id');
+                $statement = $pdo->prepare('SELECT erfassen.id, erfassen.name, erfassen.email, erfassen.telefon, erfassen.risikostufe, mortgages.package FROM erfassen INNER JOIN mortgages ON erfassen.fk_mortgages = mortgages.id');
                 $statement->execute();
     
                 $result = $statement->fetchAll();
@@ -38,8 +38,29 @@
     
     
             }
+        
+        public function update()
+        {
+            $completed = $_POST['rückzahlungsstatus'] ?? false;
+
+            $update = new hypo($_POST['name'], $_POST['email'], $_POST['telefon'], $_POST['risikostufe'], (int)$completed);
+            $update->update($_POST['id']);
+
+            header('Location: uebersicht');
         }
 
+        public function edit()
+        {
+            $edit = new hypo();
+            $edit = $edit->find($_GET['id']);
+    
+            $erfassen = new hypo();
+            $erfassen = $erfassen->getAll();
+
+            require 'app/Views/bearbeiten.view.php';
+        }
+
+    }
         
 
 

@@ -5,6 +5,8 @@ $routes = [
 	'/verleihe/erfassen' => 'VerleihController@index',
 	'/verleihe/uebersicht' => 'VerleihController@uebersicht',
 	'/verleihe/bearbeiten' => 'VerleihController@erfassen',
+	'/verleihe/update' => 'VerleihController@update',
+	'/verleihe/edit' => 'VerleihController@edit',
 ];
 
 $db = [

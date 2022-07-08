@@ -14,6 +14,7 @@
         public int $telefon;
         public string $risikostufe;
         public string $hypopaket;
+        public int $rückzahlungsstatus;
 
         public function __construct(string $name = "", string $email = "", int $telefon =  0, string $risikostufe = "", string $hypopaket = ""){ //, int $selectbefehl
             $this->name = $name;
@@ -48,15 +49,28 @@
         return $statement->fetchAll();
         }
 
-        public function update()
+        public function update(int $id) : bool
         {
-            $completed = $_POST['completed'] ?? false;
-    
-            $task = new Task($_POST['title'], (int)$completed);
-            $task->update($_GET['id']);
-    
-            header('Location: bearbeiten.view.php');
+            $statement = $this->db->prepare('UPDATE `erfassen` SET name = :name, email = :email, telefon = :telefon , risikostufe = :risikostufe , rückzahlungsstatus = :rückzahlungsstatus WHERE id = :id');
+            $statement->bindParam(':name', $this->name);
+            $statement->bindParam(':email', $this->email);
+            $statement->bindParam(':telefon', $this->telefon);
+            $statement->bindParam(':risikostufe', $this->risikostufe);
+            $statement->bindParam(':rückzahlungsstatus', $this->rückzahlungsstatus);
+
+            return $statement->execute();
         }
+
+
+        public function find(int $id): array|false
+         {
+        $statement = $this->db->prepare('SELECT * FROM erfassen WHERE id = :id');
+        $statement->bindParam(':id', $id, PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetch();
+        }
+
 
     }
 

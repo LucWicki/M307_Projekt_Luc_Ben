@@ -11,9 +11,7 @@
     <ul>
         <?php
                 foreach ($result as $entry){
-
-
-                    echo("<li>". "Name: " . $entry['name']. ' | '. "Email: " . $entry['email']. ' | '. "Telefon: " .  $entry['telefon']. ' | '. "Risikostufe: " . $entry['risikostufe']. ' | '. "Hypopaket: " . $entry['package'] . "</li>");
+                    echo("<li>". "Name: " . $entry['name']. ' | '. "Email: " . $entry['email']. ' | '. "Telefon: " .  $entry['telefon']. ' | '. "Risikostufe: " . $entry['risikostufe']. ' | '. "Hypopaket: " . $entry['package'] ."<a href='edit?id=".$entry['id']."'>". " bearbeiten". "</a>". "</li>" ."<br>") ;
                 }
         ?>
         

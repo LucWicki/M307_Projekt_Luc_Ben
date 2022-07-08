@@ -10,29 +10,36 @@
 <body>
 
 
-    <form action="bearbeiten" method="post">
+    <ul>
 
-        <fieldset>
+        <form action="update" method="post">
 
-        <legend>Persöhnliche Angaben</legend>
+       <fieldset>
+        <legend>Bearbeiten</legend>
 
-       <!--  <label for="name">Name:</label> 
-        <input type="text" name="Name"> <br> -->
         <label for="name">Name:</label>
-        <input type="name" name="name" value=""> <br>
+        <input type="name" name="name" value="<?= $edit["name"] ?>"> <br>
         
         <label for="email">Email:</label>
-        <input type="email" name="email" value=""> <br> 
+        <input type="email" name="email" value="<?= $edit["email"] ?>"> <br> 
 
         <label for="telefon">Telefon:</label>
-        <input type="tel" name="telefon" value=""> <br>
+        <input type="telfon" name="telefon" value="<?= $edit["telefon"] ?>"> <br>
 
-        <label for=""></label>
-
+        <label for="risikostufe">Risikostufe:</label>
+       <select name="risikostufe" id="risikostufe" onchange="Zusatztage()">
+            <option value="wählen">Wählen</option>
+            <option value="sehr tief">sehr tief</option> <!-- -> value soll id sein, Wert soll package -->
+            <option value="tief">tief</option>
+            <option value="normal">normal</option>
+            <option value="hoch">hoch</option>
+            <option value="sehr hoch">sehr hoch</option>
+       </select> <br> 
 
        <label id="frist">Zurückzahlungsdatum: </label> <br>
 
-    <select name="hypopaket">
+       <label for="hypopaket">Hypopaket:</label>
+       <select name="hypopaket">
     <?php
 
         foreach($erfassen as $package){
@@ -48,21 +55,12 @@
         </fieldset>
 
 
+        <button type="submit">Speichern</button>
+
+
+        </form>
         
-      <!--  /* <select name="hypopaket"><option value="$hp_entry">$hp_entry</option></select> */ -->
-
-
-
-      <!--   <label for="name">Email:</label>
-        <input type="email" name="Email"> <br>
-        <label for="name">Email:</label>
-        <input type="email" name="Email"> <br>
- -->    <br>
-        <button type="submit">Absenden</button>
-
-        
-        
-    </form>
+    </ul>
 
 </body>
 </html>
