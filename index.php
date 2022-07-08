@@ -2,7 +2,6 @@
 require 'core/bootstrap.php';
 
 $routes = [
-	'/hallo/welt' => 'WelcomeController@index',
 	'/verleihe/erfassen' => 'VerleihController@index',
 	'/verleihe/uebersicht' => 'VerleihController@uebersicht',
 ];

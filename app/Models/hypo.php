@@ -8,19 +8,19 @@
          */
         public $db;
         
-        public $selectbefehl = 'SELECT mortgages.id, mortgages.package  FROM mortgages INNER JOIN erfassen ON erfassen.fk_mortgages = mortgages.id';
-        public string $name;
+/*         public $selectbefehl = 'SELECT mortgages.id, mortgages.package  FROM mortgages INNER JOIN erfassen ON erfassen.fk_mortgages = mortgages.id';
+ */        public string $name;
         public string $email;
         public int $telefon;
         public int $risikostufe;
         public string $hypopaket;
 
-        public function __construct(string $email = "", string $name = "", int $telefon =  0, int $risikostufe = 0 ){ //, int $selectbefehl
+        public function __construct(string $email = "", string $name = "", int $telefon =  0, int $risikostufe = 0, string $hypopaket = ""){ //, int $selectbefehl
             $this->name = $name;
             $this->email = $email;
             $this->telefon = $telefon;
             $this->risikostufe = $risikostufe;
-            //$this->hypopaket = $selectbefehl;
+            $this->hypopaket = $hypopaket;
             $this->db = db();
 
         }
