@@ -48,6 +48,16 @@
         return $statement->fetchAll();
         }
 
+        public function update()
+        {
+            $completed = $_POST['completed'] ?? false;
+    
+            $task = new Task($_POST['title'], (int)$completed);
+            $task->update($_GET['id']);
+    
+            header('Location: bearbeiten.view.php');
+        }
+
     }
 
 
