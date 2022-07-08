@@ -28,7 +28,7 @@
         public function erfassen(){
 
             
-            $statement = $this->db->prepare('INSERT INTO `erfassen` (name, email,  telefon, risikostufe, hypopaket) VALUES (:name, :email,  :telefon, :risikostufe, :hypopaket)'); //, fk_mortgages, :fk_mortgages
+            $statement = $this->db->prepare('INSERT INTO `erfassen` (name, email,  telefon, risikostufe, fk_mortgages) VALUES (:name, :email,  :telefon, :risikostufe, :hypopaket)'); //, fk_mortgages, :fk_mortgages
             $statement->bindParam(':email', $this->email, PDO::PARAM_STR);
             $statement->bindParam(':name', $this->name, PDO::PARAM_STR);
             $statement->bindParam(':telefon', $this->telefon, PDO::PARAM_INT);

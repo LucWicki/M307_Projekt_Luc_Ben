@@ -13,7 +13,7 @@
                 foreach ($result as $entry){
 
 
-                    echo("<li>". "Name: " . $entry['name']. ' | '. "Email: " . $entry['email']. ' | '. "Telefon: " .  $entry['telefon']. ' | '. "Risikostufe: " . $entry['risikostufe']. ' | '. "Hypopaket: " . $entry['hypopaket'] . "</li>");
+                    echo("<li>". "Name: " . $entry['name']. ' | '. "Email: " . $entry['email']. ' | '. "Telefon: " .  $entry['telefon']. ' | '. "Risikostufe: " . $entry['risikostufe']. ' | '. "Hypopaket: " . $entry['package'] . "</li>");
                 }
         ?>
         
