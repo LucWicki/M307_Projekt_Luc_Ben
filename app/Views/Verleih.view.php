@@ -9,7 +9,7 @@
 <body>
 
 
-    <form action="erfassen" method="post">
+    <form action="bearbeiten" method="post">
 
         <fieldset>
 
@@ -36,7 +36,7 @@
        </select>
 
 
-    <select name="xx">
+    <select name="hypopaket">
     <?php
 
         foreach($erfassen as $package){
@@ -48,6 +48,7 @@
         }*/
     ?>
     </select>
+    
         </fieldset>
 
 

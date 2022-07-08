@@ -4,6 +4,7 @@ require 'core/bootstrap.php';
 $routes = [
 	'/verleihe/erfassen' => 'VerleihController@index',
 	'/verleihe/uebersicht' => 'VerleihController@uebersicht',
+	'/verleihe/bearbeiten' => 'VerleihController@erfassen',
 ];
 
 $db = [

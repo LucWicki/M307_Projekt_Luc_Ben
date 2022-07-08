@@ -19,8 +19,8 @@
 
                 $erfassen = new hypo($_POST['name'], $_POST['email'], $_POST['telefon'], $_POST['risikostufe'], $_POST['hypopaket']); //, $_POST['fk_mortgages']
                 $erfassen->erfassen();
-                echo 'halo';
-                /* header('Location: uebersicht');  */
+                
+                 header('Location: uebersicht');  
 
             } 
             else
@@ -31,7 +31,7 @@
 
                 $pdo = db();
     
-                $statement = $pdo->prepare('SELECT * FROM erfassen');
+                $statement = $pdo->prepare('SELECT erfassen.name, erfassen.email, erfassen.telefon, erfassen.risikostufe, mortgages.package FROM erfassen INNER JOIN mortgages ON erfassen.fk_mortgages = mortgages.id');
                 $statement->execute();
     
                 $result = $statement->fetchAll();
