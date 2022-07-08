@@ -3,13 +3,23 @@
     class VerleihController{
 
 
+        public function index(){
+            $erfassen = new hypo();
+            $erfassen = $erfassen->getAll();
+
+            require 'app/Views/verleih.view.php';
+        }
+        
+
+
+
         public function erfassen(){
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 $erfassen = new hypo($_POST['name'], $_POST['email'],  $_POST['telefon'], $_POST['risikostufe'] ); //, $_POST['fk_mortgages']
                 $erfassen->erfassen();
 
-           /*  header('Location: uebersicht'); */
+              header('Location: uebersicht'); 
 
             } 
             require 'app/Views/verleih.view.php';

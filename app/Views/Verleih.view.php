@@ -35,16 +35,19 @@
             <option value="sehr hoch">sehr hoch</option>
        </select>
 
+
     <select name="xx">
-
     <?php
-        foreach(){
-            echo "option ... id ... value"
+
+        foreach($erfassen as $package){
+            echo "<option value='".$package["id"]."'>".$package["package"]."</option>";
         }
+
+        /*foreach($id as $packages){
+            echo "option ... id ... value"
+        }*/
     ?>
-
     </select>
-
         </fieldset>
 
 

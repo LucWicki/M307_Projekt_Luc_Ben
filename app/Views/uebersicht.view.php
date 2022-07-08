@@ -11,7 +11,7 @@
     <ul>
         <?php
                 foreach ($result as $entry)
-                    echo("<li>".'|'. $entry['Email']."</li>");
+                    echo("<li>".'|'. $entry['name']. $entry['email']. $entry['telefon']. $entry['risikostufe']. "</li>");
 
         ?>
         
