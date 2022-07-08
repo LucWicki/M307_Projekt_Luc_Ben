@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hypothek-Verleih erfassen</title>
+    <script src="../public/js/app.js"></script>
 </head>
 <body>
 
@@ -27,14 +28,15 @@
         <input type="telfon" name="telefon"> <br>
 
         <label for="risikostufe">Risikostufe:</label>
-       <select name="risikostufe" id="risikostufe">
+       <select name="risikostufe" id="risikostufe" onchange="Zusatztage()">
             <option value="sehr tief">sehr tief</option> <!-- -> value soll id sein, Wert soll package -->
             <option value="tief">tief</option>
             <option value="normal">normal</option>
             <option value="hoch">hoch</option>
             <option value="sehr hoch">sehr hoch</option>
-       </select>
+       </select> <br> 
 
+       <label id="frist">Zurückzahlungsdatum: </label> <br>
 
     <select name="hypopaket">
     <?php
@@ -48,7 +50,7 @@
         }*/
     ?>
     </select>
-    
+
         </fieldset>
 
 

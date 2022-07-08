@@ -1,12 +1,15 @@
 
+ var select = document.getElementById('risikostufe');
 
-function berechnen(){
+/* document.getElementById('frist').innerHTML = Zusatztage(); */
 
-    var frist = 480;
-    var select = document.getElementById('risikostufe');
-    var value = select.options[select.selectedIndex].value;
+function Zusatztage(){
 
-    switch(value){
+    document.getElementById('frist').innerHTML = 'helo';
+    
+    console.log(date);
+
+    switch(select){
 
         case 'sehr tief': frist+= 360; break;
         case 'tief': frist+=180; break;
@@ -14,7 +17,8 @@ function berechnen(){
         case 'sehr hoch': frist-=240; break;
 
     }
-
-
+    
+    
+    console.log(frist);
 
 }
